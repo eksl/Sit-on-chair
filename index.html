@@ -1,149 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Sit on chair</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- ******** Header ******** -->
-    <header>
+    <header class="header">
+
         <!-- Menu bar -->
-        <div>
+        <div class="main-width header-content">
+
             <!-- Logo button -->
-            <a href="index.html">Sit on chair</a>
+            <a class="logo" href="index.html">Sit <span class="text--green">on</span> chair</a>
+
             <!-- Main menu in header -->
-            <ul>
-                <li>
-                    <a href="#">O firmie</a>
-                    <ul>
-                        <li>Aktualności</li>
-                        <li>Nasz team</li>
-                        <li>Historia</li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Galeria</a>
-                </li>
-                <li>
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list__item">
+                        <a href="#">O firmie</a>
+                        <ul class="menu-list menu-list--hidden">
+                            <li class="menu-list__item"><a href="#">Aktualności</a></li>
+                            <li class="menu-list__item"><a href="#">Nasz team</a></li>
+                            <li class="menu-list__item"><a href="#">Historia</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-list__item">
+                        <a href="#">Galeria</a>
+                    </li>
+                    <li class="menu-list__item">
                         <a href="#">Kontakt</a>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
+
     </header>
 
     <!-- ******** Main view ******** -->
 
-    <!-- Top article -->
-    <section>
-        <div>
-            <div class="main-image"></div>
-            <h1>Sit on our chair</h1>
-            <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.</p>
-            <button>Zobacz więcej</button>
+    <!-- Front section -->
+    <section class="container-top">
+        <div class="front-section main-width">
+            <button class="front-section__arrow"><</button>
+            <div class="front-section__image">
+            </div>
+            <div class="front-section__content">
+                <h1 class="front-section__title">Sit <span class="text--green">on</span> our <span
+                        class="text--green">chair</span></h1>
+                <p class="front-section__text">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a
+                    pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et
+                    ligula. Ut molestie a, ultricies porta urna.</p>
+                <button class="front-section__more-button">Zobacz więcej</button>
+            </div>
+            <button class="front-section__arrow">></button>
         </div>
     </section>
 
     <!-- Section with boxes with captions and descriptions -->
-    <section>
-        <div>
-            <div>
-                    <p>Chair Clair</p>
-            </div>
-            <div>
-                <p>Chair Clair</p>
-                <p>Quisque nisl massa, ultrices egestas aliquet ac, luctus eu dolor. Nullam a turpis pharetra, vulputate sapien quis, lobortis lorem. Vivamus pulvinar auctor libero non viverra. Morbi at cursus dui.</p>
-            </div>
-            <div>
-                    <p>Chair Margarita</p>
-            </div>
-            <div>
-                <p>Chair Margarita</p>
-                <p>Nam vitae consectetur quam. Nulla maximus, diam ut efficitur convallis, diam ex feugiat nulla, quis ultrices odio odio ac lectus. Quisque ut gravida tellus. Nam sit amet nisi eu neque fringilla placerat. Donec a vehicula urna.</p>
-            </div>
-            <div>
-                    <p>Finds all inputs</p>
-            </div>
-            <div>
-                <p>Finds all inputs</p>
-                <p>Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.</p>
-            </div>
+    <section class="container-boxes">
+        <div class="widget-container main-width">
+            <article class="widget">
+                <p class="widget__title">Chair CLAIR</p>
+            </article>
+            <article class="widget">
+                <p class="widget__title">Chair MARGARITA</p>
+            </article>
+            <article class="widget widget--description">
+                <p class="widget__title">Finds all inputs</p>
+                <p class="widget__text">Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change
+                    when clicking the checkboxes since no click events have been linked.</p>
+            </article>
         </div>
     </section>
 
     <!-- Offers section -->
-    <section>
-        <div>
+    <section class="container-offers">
+        <div class="main-width">
             <h2>Cennik</h2>
+
             <!-- Offers -->
-            <div>
-                <p>Basic plan</p>
-                <div>
-                    <p>85<sup>99</sup></p>
-                    <p>pln/msc</p>
-                </div>
-                <p>Zakup towaru + dowóz</p>
-                <p>Serwis</p>
-                <button>Dołącz</button>
+            <div class="price-list">
+                <article class="offer">
+                    <p class="offer__title">Basic plan</p>
+                    <div class="offer__price">
+                        <p class="offer__amount">85<sup class="offer__up">99</sup></p>
+                        <p class="offer__currency">pln/msc</p>
+                    </div>
+                    <p class="offer__info">Zakup towaru + dowóz</p>
+                    <p class="offer__info">Serwis</p>
+                    <button class="offer__join">Dołącz</button>
+                </article>
+                <article class="offer offer--selected">
+                    <p class="offer__title">Standard plan</p>
+                    <div class="offer__price">
+                        <p class="offer__amount">95<sup class="offer__up">99</sup></p>
+                        <p class="offer__currency">pln/msc</p>
+                    </div>
+                    <p class="offer__info">Zakup towaru + dowóz</p>
+                    <p class="offer__info">Serwis</p>
+                    <p class="offer__info">Gwarancja 5 lat</p>
+                    <button class="offer__join">Dołącz</button>
+                </article>
+                <article class="offer">
+                    <p class="offer__title">Advance plan</p>
+                    <div class="offer__price">
+                        <p class="offer__amount">211<sup class="offer__up">00</sup></p>
+                        <p class="offer__currency">pln/msc</p>
+                    </div>
+                    <p class="offer__info">Zakup towaru + dowóz</p>
+                    <p class="offer__info">Serwis</p>
+                    <p class="offer__info">Gwarancja 6 lat</p>
+                    <p class="offer__info">Porady projektanta</p>
+                    <button class="offer__join">Dołącz</button>
+                </article>
             </div>
-            <div>
-                <p>Standard plan</p>
-                <div>
-                    <p>95<sup>99</sup></p>
-                    <p>pln/msc</p>
-                </div>
-                <p>Zakup towaru + dowóz</p>
-                <p>Serwis</p>
-                <p>Gwarancja 5 lat</p>
-                <button>Dołącz</button>
-            </div>
-            <div>
-                <p>Advance plan</p>
-                <div>
-                    <p>211<sup>00</sup></p>
-                    <p>pln/msc</p>
-                </div>
-                <p>Zakup towaru + dowóz</p>
-                <p>Serwis</p>
-                <p>Gwarancja 6 lat</p>
-                <p>Porady projektanta</p>
-                <button>Dołącz</button>
-            </div>
+
         </div>
     </section>
 
     <!-- Contact section -->
-    <section>
-        <div>
+    <section class="container-contact">
+        <div class="main-width">
             <h2>Kontakt</h2>
-            <form>
-                <input type="text" name="name" placeholder="Imię">
-                <input type="email" name="email" placeholder="E-mail">
-                <textarea name="message" cols="30" rows="10" placeholder="Wiadomość"></textarea>
-                <!-- Chair picture -->
-                <div></div>
-                <!-- Checkbox -->
-                <div>
-                    <div></div>
-                    <p>Zgadzam się na przetwarzanie danych osobowych</p>
+            <form class="contact__form">
+                <div class="contact__fields">
+                    <input class="contact__input" type="text" name="name" placeholder="Imię">
+                    <input class="contact__input" type="email" name="email" placeholder="E-mail">
+                    <textarea class="contact__area" name="message" cols="30" rows="10" placeholder="Wiadomość"></textarea>
                 </div>
-                <input type="submit" value="Wyślij">
+
+                <div class="contact__send">
+                    <!-- Chair picture -->
+                    <div class="contact__pic"></div>
+
+                    <!-- Checkbox -->
+                    <div class="contact__confirm">
+                        <div class="contact__check"></div>
+                        <p class="contact__consent">Zgadzam się na przetwarzanie danych osobowych</p>
+                    </div>
+
+                    <input class="contact__submit" type="submit" value="Wyślij">
+                </div>
             </form>
         </div>
     </section>
 
     <!-- ******** Footer ******** -->
-    <footer>
-        <div>
-            <p>Copyright 2014 | All Rights Reserved. - Sit On Chair</p>
+    <footer class="footer">
+        <div class="main-width">
+            <p class="footer__copy">Copyright 2014 | All Rights Reserved. - Sit On Chair</p>
+
             <!-- 4 divs for 4 icons (Flickr, Vimeo, Pinterest and Twitter) -->
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="footer__icon"></div>
+            <div class="footer__icon"></div>
+            <div class="footer__icon"></div>
+            <div class="footer__icon"></div>
+
             <!-- Logo button -->
-            <a href="#">Sit on chair</a>
+            <a class="footer__logo" href="#">Sit <span class="text--strong">on</span> chair</a>
         </div>
     </footer>
 </body>
+
 </html>
