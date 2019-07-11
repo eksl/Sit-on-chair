@@ -174,11 +174,12 @@
 /* ******** Section with boxes with captions and descriptions ******** */
 
 .container-boxes {
-    height: 350px;
+    min-height: 350px;
 }
 
 .widget-container {
     height: 100%;
+    padding: 60px 0;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -237,7 +238,7 @@
 
 .container-offers {
     background-color: #F1F1F1;
-    height: 700px;
+    min-height: 700px;
     padding-top: 40px;
 }
 
@@ -259,6 +260,7 @@ h2:after {
 .price-list {
     margin-top: 70px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -269,6 +271,7 @@ h2:after {
     background-color: #F9F9F9;
     text-align: center;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .offer:before {
@@ -414,6 +417,7 @@ h2:after {
 .contact__form {
     margin-top: 60px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
