@@ -274,6 +274,10 @@ h2:after {
     margin-bottom: 50px;
 }
 
+.offer:hover {
+    cursor: pointer;
+}
+
 .offer:before {
     content: "";
     width: 50px;
@@ -432,7 +436,7 @@ h2:after {
     font-size: 26px;
     padding: 15px;
     margin-bottom: 30px;
-    
+
 }
 
 .contact__area {
@@ -465,11 +469,16 @@ h2:after {
     border: 1px solid #27C7AB;
     width: 50px;
     height: 50px;
+    background-image: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.contact__confirm .contact__check--checked {
     background-image: url("../images/form_ok.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    display: inline-block;
 }
 
 .contact__confirm .contact__consent {

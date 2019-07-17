@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function main() {
-    handlingEvents();
+    handlingOfferEvents();
 }
+
+/* **** Offer section events **** */
 
 // Color offer articles when 'mouseover'
 function offerArticleEventOn() {
@@ -16,8 +18,8 @@ function offerArticleEventOff() {
     this.classList.remove("offer--selected");
 }
 
-// Add event listeners
-function handlingEvents() {
+// Add offer section event listeners
+function handlingOfferEvents() {
     var offerArticle = document.querySelectorAll(".offer");
     console.log(offerArticle);
 
@@ -26,5 +28,26 @@ function handlingEvents() {
     });
     offerArticle.forEach(function (element) {
         element.addEventListener("mouseout", offerArticleEventOff);
+    });
+}
+
+/* **** Contact section events **** */
+
+// Checkbox event
+function contactCheckboxEvent() {
+    if (this.classList.contains("contact__check--checked")) {
+        this.classList.remove("contact__check--checked");
+    } else {
+        this.classList.add("contact__check--checked");
+    }
+}
+
+// Add contact section event listeners
+function handlingOfferEvents() {
+    var contactCheckbox = document.querySelectorAll(".contact__check");
+    console.log(contactCheckbox);
+
+    contactCheckbox.forEach(function (element) {
+        element.addEventListener("click", contactCheckboxEvent);
     });
 }
