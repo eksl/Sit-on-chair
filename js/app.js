@@ -4,8 +4,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function main() {
+    handlingMenuEvents();
     handlingOfferEvents();
     handlingContactEvents();
+}
+
+/* **** Header events **** */
+
+// Menu
+function menuEventOn() {
+    var submenu = this.querySelector(".submenu-list");
+    if (submenu != null) {
+        submenu.style.display = "block";
+    }
+}
+
+function menuEventOff() {
+    var submenu = this.querySelector(".submenu-list");
+    if (submenu != null) {
+        submenu.style.display = "none";
+    }
+}
+
+function handlingMenuEvents() {
+    var mainMenuItems = document.querySelectorAll(".menu > .menu-list > .menu-list__item");
+
+    mainMenuItems.forEach(function (element) {
+        element.addEventListener("mouseover", menuEventOn);
+        element.addEventListener("mouseout", menuEventOff);
+    });
 }
 
 /* **** Offer section events **** */
@@ -22,7 +49,6 @@ function offerArticleEventOff() {
 // Add offer section event listeners
 function handlingOfferEvents() {
     var offerArticle = document.querySelectorAll(".offer");
-    console.log(offerArticle);
 
     offerArticle.forEach(function (element) {
         element.addEventListener("mouseover", offerArticleEventOn);
@@ -46,7 +72,6 @@ function contactCheckboxEvent() {
 // Add contact section event listeners
 function handlingContactEvents() {
     var contactCheckbox = document.querySelectorAll(".contact__check");
-    console.log(contactCheckbox);
 
     contactCheckbox.forEach(function (element) {
         element.addEventListener("click", contactCheckboxEvent);
