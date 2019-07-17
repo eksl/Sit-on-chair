@@ -51,4 +51,18 @@ function handlingContactEvents() {
     contactCheckbox.forEach(function (element) {
         element.addEventListener("click", contactCheckboxEvent);
     });
+
+    var nameInput = document.querySelector(".contact__input-name");
+    var emailInput = document.querySelector(".contact__input-email");
+    var areaInput = document.querySelector(".contact__area");
+
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (document.querySelector(".contact__check--checked") && nameInput.vale != "" && emailInput.value != "" && areaInput.value != "") {
+            console.log("Imię: " + nameInput.value);
+            console.log("E-mail: " + emailInput.value);
+            console.log("Wiadomość: " + areaInput.value);
+        }
+    });
+
 }
