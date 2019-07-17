@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function main() {
     handlingOfferEvents();
+    handlingContactEvents();
 }
 
 /* **** Offer section events **** */
@@ -43,7 +44,7 @@ function contactCheckboxEvent() {
 }
 
 // Add contact section event listeners
-function handlingOfferEvents() {
+function handlingContactEvents() {
     var contactCheckbox = document.querySelectorAll(".contact__check");
     console.log(contactCheckbox);
 
