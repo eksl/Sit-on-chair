@@ -103,6 +103,14 @@
     margin-top: 5px;
 }
 
+.submenu-list__mini-zone {
+    background: none;
+    width: 135px;
+    height: 30px;
+    position: absolute;
+    top: -30px;
+}
+
 /* ******** Main view ******** */
 
 /* ******** Front section ******** */
