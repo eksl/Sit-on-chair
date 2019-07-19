@@ -138,14 +138,40 @@
     cursor: pointer;
 }
 
+.front-section__container {
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.front-section__container--visible {
+    display: flex;
+}
+
 .front-section__image {
-    background-image: url("../images/black_chair.png");
     width: 45%;
     min-width: 400px;
     height: 500px;
     margin: 50px 0;
     background-size: cover;
     background-position: center;
+}
+
+.front-section__image--black-chair {
+    background-image: url("../images/black_chair.png");
+}
+
+.front-section__image--orange-chair {
+    background-image: url("../images/orange_chair.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.front-section__image--red-chair {
+    background-image: url("../images/red_chair.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .front-section__content {

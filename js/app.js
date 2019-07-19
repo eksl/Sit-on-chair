@@ -4,8 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function main() {
+    // Menu
     handlingMenuEvents();
+    // Front section
+    handlingFrontGalleryEvents();
+    // Offers section
     handlingOfferEvents();
+    // Contact section
     handlingContactEvents();
 }
 
@@ -33,6 +38,56 @@ function handlingMenuEvents() {
         element.addEventListener("mouseover", menuEventOn);
         element.addEventListener("mouseout", menuEventOff);
     });
+}
+
+/* ******** Main view ******** */
+
+/* **** Front section events **** */
+
+function frontContainerGalleryPrev() {
+    // List of front containers
+    var frontContainers = document.querySelectorAll(".front-section__container");
+    // Index of visible container
+    var frontIndex;
+    for (var i = 0; i < frontContainers.length; i++) {
+        if (frontContainers[i].classList.contains("front-section__container--visible")) {
+            frontContainers[i].classList.remove("front-section__container--visible");
+            frontIndex = i - 1;
+            if (i === 0) {
+                frontIndex = frontContainers.length - 1;
+            }
+            frontContainers[frontIndex].classList.add("front-section__container--visible");
+            break;
+        }
+    }
+}
+
+function frontContainerGalleryNext() {
+    // List of front containers
+    var frontContainers = document.querySelectorAll(".front-section__container");
+    // Index of visible container
+    var frontIndex = 0;
+    for (var i = 0; i < frontContainers.length; i++) {
+        if (frontContainers[i].classList.contains("front-section__container--visible")) {
+            frontContainers[i].classList.remove("front-section__container--visible");
+            frontIndex = i + 1;
+            if (i === 2) {
+                frontIndex = 0;
+            }
+            frontContainers[frontIndex].classList.add("front-section__container--visible");
+            break;
+        }
+    }
+}
+
+function handlingFrontGalleryEvents() {
+    // Previous button
+    var prev = document.querySelectorAll(".front-section__arrow")[0];
+    // Next button
+    var next = document.querySelectorAll(".front-section__arrow")[1];
+
+    prev.addEventListener("click", frontContainerGalleryPrev);
+    next.addEventListener("click", frontContainerGalleryNext);
 }
 
 /* **** Offer section events **** */
