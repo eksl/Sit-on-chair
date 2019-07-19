@@ -8,6 +8,8 @@ function main() {
     handlingMenuEvents();
     // Front section
     handlingFrontGalleryEvents();
+    // Widget section
+    handlingWidgetEvents();
     // Offers section
     handlingOfferEvents();
     // Contact section
@@ -90,6 +92,24 @@ function handlingFrontGalleryEvents() {
     next.addEventListener("click", frontContainerGalleryNext);
 }
 
+/* **** Widget section events **** */
+
+function widgetMouseOn() {
+    this.classList.add("widget--description");
+}
+
+function widgetMouseOff() {
+    this.classList.remove("widget--description");
+}
+
+function handlingWidgetEvents() {
+    var widgets = document.querySelectorAll(".widget");
+    widgets.forEach(function (element) {
+        element.addEventListener("mouseover", widgetMouseOn);
+        element.addEventListener("mouseout", widgetMouseOff);
+    });
+}
+
 /* **** Offer section events **** */
 
 // Color offer articles when 'mouseover'
@@ -107,8 +127,6 @@ function handlingOfferEvents() {
 
     offerArticle.forEach(function (element) {
         element.addEventListener("mouseover", offerArticleEventOn);
-    });
-    offerArticle.forEach(function (element) {
         element.addEventListener("mouseout", offerArticleEventOff);
     });
 }

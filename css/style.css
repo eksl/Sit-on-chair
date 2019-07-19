@@ -236,6 +236,10 @@
     background-image: url("../images/box2_img.jpg");
 }
 
+.widget:last-of-type {
+    background-image: url("../images/orange_chair.png");
+}
+
 .widget:hover {
     cursor: pointer;
 }
@@ -260,11 +264,20 @@
     left: 15px;
 }
 
+.widget .widget__text {
+    display: none;
+}
+
+.widget-container .widget--description {
+    background-image: none;
+}
+
 .widget--description .widget__title {
     top: 10px;
 }
 
 .widget--description .widget__text {
+    display: block;
     padding: 100px 15px 20px 15px;
 }
 
