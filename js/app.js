@@ -12,6 +12,8 @@ function main() {
     handlingWidgetEvents();
     // Offers section
     handlingOfferEvents();
+    // Create chair section
+    handlingCreateEvents();
     // Contact section
     handlingContactEvents();
 }
@@ -129,6 +131,112 @@ function handlingOfferEvents() {
         element.addEventListener("mouseover", offerArticleEventOn);
         element.addEventListener("mouseout", offerArticleEventOff);
     });
+}
+
+/* **** Create your chair section **** */
+
+// Checkbox
+function checkTransport() {
+    var transport = document.querySelector(".checkbox input:checked");
+    var transportPrice = parseInt(document.querySelector(".checkbox input").dataset.transport_price);
+    var sumPanel = document.querySelector(".summary_panel .sum");
+    var sumValue = parseInt(sumPanel.innerHTML);
+
+    // Check if NaN
+    if (sumValue != sumValue) {
+        sumValue = transportPrice;
+        sumPanel.innerText = sumValue;
+    } else {
+        if (transport === null) {
+            sumValue -= transportPrice;
+            sumPanel.innerText = sumValue;
+        } else {
+            sumValue += transportPrice;
+            sumPanel.innerText = sumValue;
+        }
+    }
+}
+
+function selectChairOption() {
+    var panelLeft = document.querySelector(".summary_panel .panel_left");
+    var panelRight = document.querySelector(".summary_panel .panel_right");
+    var sumPanel = document.querySelector(".summary_panel .sum");
+
+    var chairValue;
+    var colorValue;
+    var patternValue;
+    var sum;
+
+    if (this.hasAttribute("data-chair_price")) {
+        panelLeft.querySelector(".title").innerText = this.innerText;
+        panelRight.querySelector(".title").innerText = this.dataset.chair_price;
+    } else if (this.hasAttribute("data-color_price")) {
+        panelLeft.querySelector(".color").innerText = this.innerText;
+        panelRight.querySelector(".color").innerText = this.dataset.color_price;
+    } else if (this.hasAttribute("data-fabric_price")) {
+        panelLeft.querySelector(".pattern").innerText = this.innerText;
+        panelRight.querySelector(".pattern").innerText = this.dataset.fabric_price;
+    }
+
+    if (parseInt(panelRight.querySelector(".title").innerText) > 0) {
+        chairValue = parseInt(panelRight.querySelector(".title").innerText);
+    } else {
+        chairValue = 0;
+    }
+
+    if (parseInt(panelRight.querySelector(".color").innerText) > 0) {
+        colorValue = parseInt(panelRight.querySelector(".color").innerText);
+    } else {
+        colorValue = 0;
+    }
+
+    if (parseInt(panelRight.querySelector(".pattern").innerText) > 0) {
+        patternValue = parseInt(panelRight.querySelector(".pattern").innerText)
+    } else {
+        patternValue = 0;
+    }
+
+    sum = chairValue + colorValue + patternValue;
+    sumPanel.innerText = sum;
+
+}
+
+// Hide all items except argument
+function hideAllDropListItems(item) {
+    var dropdownList = document.querySelectorAll(".drop_down_list");
+    dropdownList.forEach(function (element) {
+        if (element.style.display != "none" && element != item) {
+            element.querySelector(".list_panel").style.display = "none";
+        }
+    });
+}
+
+function createChairDropListShow() {
+    // Hide all items except the one was clicked
+    hideAllDropListItems(this);
+
+    if (this.querySelector(".list_panel").style.display === "none") {
+        this.querySelector(".list_panel").style.display = "inline-block";
+        var list = this.querySelectorAll(".list_panel li");
+        list.forEach(function (element) {
+            element.addEventListener("click", selectChairOption);
+        });
+    } else {
+        this.querySelector(".list_panel").style.display = "none";
+    }
+}
+
+// Add create section events
+function handlingCreateEvents() {
+    var dropdownList = document.querySelectorAll(".drop_down_list");
+
+    dropdownList.forEach(function (element) {
+        element.addEventListener("click", createChairDropListShow);
+    });
+
+    // Checkbox transport
+    var transport = document.querySelector(".checkbox input");
+    transport.addEventListener("click", checkTransport);
 }
 
 /* **** Contact section events **** */
