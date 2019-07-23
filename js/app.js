@@ -139,18 +139,26 @@ function handlingOfferEvents() {
 function checkTransport() {
     var transport = document.querySelector(".checkbox input:checked");
     var transportPrice = parseInt(document.querySelector(".checkbox input").dataset.transport_price);
+    var panelLeft = document.querySelector(".summary_panel .panel_left");
+    var panelRight = document.querySelector(".summary_panel .panel_right");
     var sumPanel = document.querySelector(".summary_panel .sum");
     var sumValue = parseInt(sumPanel.innerHTML);
 
     // Check if NaN
     if (sumValue != sumValue) {
+        panelLeft.querySelector(".transport").innerText = "Transport";
+        panelRight.querySelector(".transport").innerText = transportPrice;
         sumValue = transportPrice;
         sumPanel.innerText = sumValue;
     } else {
         if (transport === null) {
+            panelLeft.querySelector(".transport").innerText = "";
+            panelRight.querySelector(".transport").innerText = "";
             sumValue -= transportPrice;
             sumPanel.innerText = sumValue;
         } else {
+            panelLeft.querySelector(".transport").innerText = "Transport";
+            panelRight.querySelector(".transport").innerText = transportPrice;
             sumValue += transportPrice;
             sumPanel.innerText = sumValue;
         }
