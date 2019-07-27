@@ -169,6 +169,7 @@ function selectChairOption() {
     var panelLeft = document.querySelector(".summary_panel .panel_left");
     var panelRight = document.querySelector(".summary_panel .panel_right");
     var sumPanel = document.querySelector(".summary_panel .sum");
+    var listLabels = document.querySelectorAll(".list_label");
 
     var chairValue;
     var colorValue;
@@ -177,12 +178,15 @@ function selectChairOption() {
 
     if (this.hasAttribute("data-chair_price")) {
         panelLeft.querySelector(".title").innerText = this.innerText;
+        this.parentElement.parentElement.querySelector(".list_label").innerText = this.innerText;
         panelRight.querySelector(".title").innerText = this.dataset.chair_price;
     } else if (this.hasAttribute("data-color_price")) {
         panelLeft.querySelector(".color").innerText = this.innerText;
+        this.parentElement.parentElement.querySelector(".list_label").innerText = this.innerText;
         panelRight.querySelector(".color").innerText = this.dataset.color_price;
     } else if (this.hasAttribute("data-fabric_price")) {
         panelLeft.querySelector(".pattern").innerText = this.innerText;
+        this.parentElement.parentElement.querySelector(".list_label").innerText = this.innerText;
         panelRight.querySelector(".pattern").innerText = this.dataset.fabric_price;
     }
 
