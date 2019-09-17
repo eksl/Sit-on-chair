@@ -4,246 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <title>Sit on chair</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/solid.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <!-- ******** Header ******** -->
     <header class="header">
-
-        <!-- Menu bar -->
-        <div class="main-width header-content">
-
-            <!-- Logo button -->
-            <a class="logo" href="index.html">Sit <span class="text--green">on</span> chair</a>
-
-            <!-- Main menu in header -->
-            <nav class="menu">
+        <div class="row">
+            <div class="col-xs-6">
+                <a class="logo">Sit on chair</a>
+            </div>
+            <div class="col-xs-6">
+                <button id="menu-trigger"><i class="fas fa-bars"></i></button>
                 <ul class="menu-list">
-                    <li class="menu-list__item">
-                        <a href="#">O firmie</a>
-                        <ul class="menu-list submenu-list">
-                            <div class="submenu-list__mini-zone"></div>
-                            <li class="menu-list__item submenu-list__item">
-                                <a href="#">Aktualności</a>
-                            </li>
-                            <li class="menu-list__item submenu-list__item">
-                                <a href="#">Nasz team</a>
-                            </li>
-                            <li class="menu-list__item submenu-list__item">
-                                <a href="#">Historia</a>
-                            </li>
+                    <li>O firmie
+                        <ul class="menu-sublist">
+                            <li>Aktualności</li>
+                            <li>Nasz team</li>
+                            <li>Historia</li>
                         </ul>
                     </li>
-                    <li class="menu-list__item">
-                        <a href="#">Galeria</a>
-                    </li>
-                    <li class="menu-list__item">
-                        <a href="#">Kontakt</a>
-                    </li>
+                    <li>Galeria</li>
+                    <li>Kontakt</li>
                 </ul>
-            </nav>
-
+            </div>
         </div>
-
     </header>
 
     <!-- ******** Main view ******** -->
 
     <!-- Front section -->
-    <section class="container-top">
-        <div class="front-section main-width">
-            <button class="front-section__arrow">&#60;</button>
-            <div class="front-section__container front-section__container--visible">
-                <div class="front-section__image front-section__image--black-chair"></div>
-                <div class="front-section__content">
-                    <h1 class="front-section__title">Sit <span class="text--green">on</span> our <span
-                            class="text--green">chair</span></h1>
-                    <p class="front-section__text">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a
-                        pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.
-                        Curabitur et
-                        ligula. Ut molestie a, ultricies porta urna.</p>
-                    <button class="front-section__more-button">Zobacz więcej</button>
-                </div>
+    <div class="wrapper">
+        <section>
+            <button class="prev">&lt;</button>
+            <!-- <img src="./images/black_chair.png"> -->
+            <div>
+                <h1>Sit on our chair</h1>
+                <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
+                    Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a,
+                    ultricies porta urna.</p>
+                <button>Zobacz więcej</button>
             </div>
-            <div class="front-section__container">
-                <div class="front-section__image front-section__image--orange-chair"></div>
-                <div class="front-section__content">
-                    <h1 class="front-section__title">Sit <span class="text--green">on</span> our <span
-                            class="text--green">chair</span></h1>
-                    <p class="front-section__text">Cras fermentum tellus ac scelerisque gravida. Pellentesque habitant
-                        morbi tristique senectus et netus et malesuada fames
-                        ac turpis egestas. Vestibulum ac justo id lacus vulputate tincidunt et laoreet nulla.</p>
-                    <button class="front-section__more-button">Zobacz więcej</button>
-                </div>
-            </div>
-            <div class="front-section__container">
-                <div class="front-section__image front-section__image--red-chair"></div>
-                <div class="front-section__content">
-                    <h1 class="front-section__title">Sit <span class="text--green">on</span> our <span
-                            class="text--green">chair</span></h1>
-                    <p class="front-section__text">Nullam id ligula sem. In dictum enim in eros commodo mattis. Duis
-                        faucibus ipsum sit amet tortor ornare, ac ornare
-                        tortor tristique. Aliquam gravida, mi nec vestibulum scelerisque, tortor ex auctor urna, semper
-                        interdum risus turpis
-                        quis ipsum. Donec imperdiet accumsan ipsum vel dignissim.</p>
-                    <button class="front-section__more-button">Zobacz więcej</button>
-                </div>
-            </div>
-            <button class="front-section__arrow">&#62;</button>
-        </div>
-    </section>
+            <button class="next">&gt;</button>
+        </section>
+    </div>
 
-    <!-- Section with boxes with captions and descriptions -->
-    <section class="container-boxes">
-        <div class="widget-container main-width">
-            <article class="widget">
-                <p class="widget__title">Chair CLAIR</p>
-                <p class="widget__text">Pellentesque ut maximus turpis, placerat maximus quam. Etiam dapibus pharetra
-                    pulvinar. Nam placerat et velit quis
-                    varius. Phasellus condimentum mi in nisl aliquet facilisis. Mauris condimentum nulla vehicula odio
-                    lobortis.</p>
-            </article>
-            <article class="widget">
-                <p class="widget__title">Chair MARGARITA</p>
-                <p class="widget__text">In maximus bibendum sapien id vehicula. Pellentesque in massa in nunc gravida
-                    dignissim ac quis ipsum. Pellentesque odio
-                    sem, fermentum eu urna scelerisque, laoreet suscipit neque.</p>
-            </article>
-            <article class="widget">
-                <p class="widget__title">Finds all inputs</p>
-                <p class="widget__text">Finds all inputs that are not checked and highlights the next sibling span.
-                    Notice there is no change
-                    when clicking the checkboxes since no click events have been linked.</p>
-            </article>
-        </div>
-    </section>
+    <!-- Boxes section -->
+    <div class="wrapper">
+        <section>
+            <div class="box">
+                <img>
+                <div>
+                    <p>Chair CLAIR</p>
+                </div>
+                <div>
+                    <p>Chair CLAIR</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut odio pretium, commodo urna
+                        et, finibus magna. Suspendisse potenti. Quisque sit amet sagittis metus, sit amet egestas mi.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <img>
+                <div>
+                    <p>Chair MARGARITA</p>
+                </div>
+                <div>
+                    <p>Chair MARGARITA</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut odio pretium, commodo urna
+                        et, finibus magna. Suspendisse potenti. Quisque sit amet sagittis metus, sit amet egestas mi.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <img>
+                <div>
+                    <p>Chair ROMANA</p>
+                </div>
+                <div>
+                    <p>Chair ROMANA</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut odio pretium, commodo urna
+                        et, finibus magna. Suspendisse potenti. Quisque sit amet sagittis metus, sit amet egestas mi.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Offers section -->
-    <section class="container-offers">
-        <div class="main-width">
+    <div class="wrapper">
+        <section>
             <h2>Cennik</h2>
-
-            <!-- Offers -->
-            <div class="price-list">
-                <article class="offer">
-                    <p class="offer__title">Basic plan</p>
-                    <div class="offer__price">
-                        <p class="offer__amount">85<sup class="offer__up">99</sup></p>
-                        <p class="offer__currency">pln/msc</p>
-                    </div>
-                    <p class="offer__info">Zakup towaru + dowóz</p>
-                    <p class="offer__info">Serwis</p>
-                    <button class="offer__join">Dołącz</button>
-                </article>
-                <article class="offer">
-                    <p class="offer__title">Standard plan</p>
-                    <div class="offer__price">
-                        <p class="offer__amount">95<sup class="offer__up">99</sup></p>
-                        <p class="offer__currency">pln/msc</p>
-                    </div>
-                    <p class="offer__info">Zakup towaru + dowóz</p>
-                    <p class="offer__info">Serwis</p>
-                    <p class="offer__info">Gwarancja 5 lat</p>
-                    <button class="offer__join">Dołącz</button>
-                </article>
-                <article class="offer">
-                    <p class="offer__title">Advance plan</p>
-                    <div class="offer__price">
-                        <p class="offer__amount">211<sup class="offer__up">00</sup></p>
-                        <p class="offer__currency">pln/msc</p>
-                    </div>
-                    <p class="offer__info">Zakup towaru + dowóz</p>
-                    <p class="offer__info">Serwis</p>
-                    <p class="offer__info">Gwarancja 6 lat</p>
-                    <p class="offer__info">Porady projektanta</p>
-                    <button class="offer__join">Dołącz</button>
-                </article>
+            <div>
+                <div>
+                    <p>Basic plan</p>
+                    <p>85<span>99</span></p>
+                    <p>pln/msc</p>
+                </div>
+                <p>Zakup towaru + dowóz</p>
+                <p>Serwis</p>
+                <button>Dołącz</button>
             </div>
-
-        </div>
-    </section>
-
-    <!-- Create your chair section -->
-    <section class="application ">
-        <div class="main-width">
-            <section class="choice_part inline">
-                <header>
-                    <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
-                    <span class="green_bell"></span>
-                </header>
-
-                <div class="form">
-                    <div class="drop_down_list">
-                        <span class="list_label">Wybierz rodzaj</span>
-                        <span class="list_arrow"></span>
-                        <ul class="list_panel">
-                            <li data-chair_price="200">Clair</li>
-                            <li data-chair_price="180">Margarita</li>
-                            <li data-chair_price="210">Selena</li>
-                        </ul>
-                    </div>
-                    <div class="drop_down_list">
-                        <span class="list_label">Wybierz kolor</span>
-                        <span class="list_arrow"></span>
-                        <ul class="list_panel">
-                            <li data-color_price="60">Czerwony</li>
-                            <li data-color_price="50">Czarny</li>
-                            <li data-color_price="60">Pomarańczowy</li>
-                        </ul>
-                    </div>
-                    <div class="drop_down_list">
-                        <span class="list_label">Wybierz materiał</span>
-                        <span class="list_arrow"></span>
-                        <ul class="list_panel">
-                            <li data-fabric_price="80">Tkanina</li>
-                            <li data-fabric_price="150">Skóra</li>
-                        </ul>
-                    </div>
-                    <div class="checkbox check-box">
-                        <input type="checkbox" id="transport" data-transport_price="200">
-                        <label for="transport">Transport</label>
-                    </div>
-                    <!--<div class="checkbox"></div>-->
-                    <!--<span class="list_label inline_text">Transport</span>-->
+            <div>
+                <div>
+                    <p>Standard plan</p>
+                    <p>95<span>99</span></p>
+                    <p>pln/msc</p>
                 </div>
-            </section>
-
-            <section class="image_part inline">
-                <img src="images/red_chair.png">
-            </section>
-
-            <section class="summary_part inline">
-                <header class="align_right">
-                    <h3>PODSUMOWANIE</h3>
-                    <span class="green_bell"></span>
-                </header>
-
-                <div class="summary_panel">
-                    <div class="panel_left">
-                        <h4 class="title">Twój fotel</h4>
-                        <span class="color"></span>
-                        <span class="pattern"></span>
-                        <span class="transport"></span>
-                    </div>
-                    <div class="panel_right">
-                        <h4 class="title value"></h4>
-                        <span class="color value"></span>
-                        <span class="pattern value"></span>
-                        <span class="transport value"></span>
-                    </div>
-                    <div class="sum_label">SUMA</div>
-                    <div class="sum"><strong></strong></div>
+                <p>Zakup towaru + dowóz</p>
+                <p>Serwis</p>
+                <p>Gwarancja 5 lat</p>
+                <button>Dołącz</button>
+            </div>
+            <div>
+                <div>
+                    <p>Advance plan</p>
+                    <p>210<span>00</span></p>
+                    <p>pln/msc</p>
                 </div>
-                <a href="" class="green_button">Zamawiam</a>
-            </section>
-        </div>
-    </section>
+                <p>Zakup towaru + dowóz</p>
+                <p>Serwis</p>
+                <p>Gwarancja 6 lat</p>>
+                <p>Porady projektanta</p>
+                <button>Dołącz</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Calculator section -->
+    <div class="wrapper">
+        <section class="choice_part inline">
+            <header>
+                <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                <span class="green_bell"></span>
+            </header>
+
+            <div class="form">
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz rodzaj</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li data-chair_price="200">Clair</li>
+                        <li data-chair_price="180">Margarita</li>
+                        <li data-chair_price="210">Selena</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz kolor</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li data-color_price="60">Czerwony</li>
+                        <li data-color_price="50">Czarny</li>
+                        <li data-color_price="60">Pomarańczowy</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz materiał</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li data-fabric_price="80">Tkanina</li>
+                        <li data-fabric_price="150">Skóra</li>
+                    </ul>
+                </div>
+                <div class="checkbox check-box">
+                    <input type="checkbox" id="transport" data-transport_price="200">
+                    <label for="transport">Transport</label>
+                </div>
+                <!--<div class="checkbox"></div>-->
+                <!--<span class="list_label inline_text">Transport</span>-->
+            </div>
+        </section>
+
+        <section class="image_part inline">
+            <img src="images/red_chair.png">
+        </section>
+
+        <section class="summary_part inline">
+            <header class="align_right">
+                <h3>PODSUMOWANIE</h3>
+                <span class="green_bell"></span>
+            </header>
+
+            <div class="summary_panel">
+                <div class="panel_left">
+                    <h4 class="title">Twój fotel</h4>
+                    <span class="color"></span>
+                    <span class="pattern"></span>
+                    <span class="transport"></span>
+                </div>
+                <div class="panel_right">
+                    <h4 class="title value"></h4>
+                    <span class="color value"></span>
+                    <span class="pattern value"></span>
+                    <span class="transport value"></span>
+                </div>
+                <div class="sum_label">SUMA</div>
+                <div class="sum"><strong></strong></div>
+            </div>
+            <a href="" class="green_button">Zamawiam</a>
+        </section>
+    </div>
 
     <!-- Contact section -->
-    <section class="container-contact">
-        <div class="main-width">
+    <div class="wrapper">
+        <section>
             <h2>Kontakt</h2>
+            <span class="green_bell"></span>
             <form class="contact__form">
                 <div class="contact__fields">
                     <input class="contact__input contact__input-name" type="text" name="name" placeholder="Imię">
@@ -265,24 +234,25 @@
                     <input class="contact__submit" type="submit" value="Wyślij">
                 </div>
             </form>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- ******** Footer ******** -->
-    <footer class="footer">
-        <div class="main-width">
-            <p class="footer__copy">Copyright 2014 | All Rights Reserved. - Sit On Chair</p>
+    <div class="wrapper">
+        <footer class="footer">
+            <p>Copyright 2014 | All Rights Reserved. - Sit On Chair</p>
 
             <!-- 4 divs for 4 icons (Flickr, Vimeo, Pinterest and Twitter) -->
-            <div class="footer__icon"></div>
-            <div class="footer__icon"></div>
-            <div class="footer__icon"></div>
-            <div class="footer__icon"></div>
+            <img>
+            <img>
+            <img>
+            <img>
 
             <!-- Logo button -->
-            <a class="footer__logo" href="#">Sit <span class="text--strong">on</span> chair</a>
-        </div>
-    </footer>
+            <a href="#">Sit <span class="text--strong">on</span> chair</a>
+        </footer>
+    </div>
+
 </body>
 
 <script src="js/app.js" type="text/javascript"></script>

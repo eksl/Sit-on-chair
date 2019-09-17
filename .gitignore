@@ -1,2 +1,7 @@
 warsztat1.jpg
 .idea/
+node_modules/
+scss/
+gulpfile.js
+package-lock.json
+package.json
